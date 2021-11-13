@@ -1,71 +1,193 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Registration</title>
-        <link rel="icon" href="img/user.png" type="image/png">
-    </head>
-    <body>
-        <table border="1" width="980" align="center">
-            <tr>
-                <td height="200" width="200"> 
-                    <img src="img/nishat.jpg" alt="picture" height="200" width="200"> 
-                </td>
-                <td align="center" background="img/bg1.jpg"> 
-                    <h1>THIS IS HUMAYRA's PORTFOLIO</h1> 
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <table border="1" width="980">
-                        <tr align="center">
-                            <td  height="50"> <a href="index.html">HOME</a> </td>
-                            <td> <a href="about.html">ABOUT</a> </td>
-                            <td> <a href="portfolio.html">PORTFOLIO</a> </td>
-                            <td> <a href="gallery.html">GALLERY</a> </td>
-                            <td> <a href="contact.html">CONTACT</a> </td>
-                            <td> <a href="registration.html">REGISTRATION</a> </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td height="600" colspan="2">
-                    <table border="1" width="980"  height="600">
-                        <tr align="center">
-                            <td>
-                                <h3>REGISTRATION FORM for MORE INFORMATION</h3> <br/>
 
-                                <label>First Name: <input type="text" name="firstname" placeholder="Your first-name"  maxlength="40"> </label>
-                                <label>Last Name: <input type="text" name="lastname" placeholder="Your last-name"  maxlength="40"> </label> <br> <br>
+<head>
+    <meta charset="UTF-8" />
+    <title>Registration</title>
+    <link rel="icon" href="img/user.png" type="image/png">
+</head>
+
+<body>
+    <table border="1" width="980" align="center">
+        <tr>
+            <td height="200" width="200">
+                <img src="img/nishat.jpg" alt="picture" height="200" width="200">
+            </td>
+            <td align="center" background="img/bg1.jpg">
+                <h1>THIS IS HUMAYRA's PORTFOLIO</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table border="1" width="980">
+                    <tr align="center">
+                        <td height="50"> <a href="index.html">HOME</a> </td>
+                        <td> <a href="about.html">ABOUT</a> </td>
+                        <td> <a href="portfolio.html">PORTFOLIO</a> </td>
+                        <td> <a href="gallery.html">GALLERY</a> </td>
+                        <td> <a href="contact.html">CONTACT</a> </td>
+                        <td> <a href="registration.html">REGISTRATION</a> </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="600" colspan="2">
+                <table border="1" width="980" height="600">
+                    <tr align="center">
+                        <td>
+                            <form action="">
+                                <h3>REGISTRATION FORM for MORE INFORMATION</h3> <br />
+
+                                <label>First Name: <input type="text" required name="firstname" placeholder="First name..."
+                                        maxlength="40"> </label> &nbsp;
+                                <label>Last Name: <input type="text" name="lastname" placeholder="Last name..."
+                                        maxlength="40"> </label> <br> <br>
 
                                 <label> Gender: </label>
-                                <label><input type="radio" name="gender">Male  </label> 
-                                <label><input type="radio" name="gender">Female  </label> 
-                                <label><input type="radio" name="gender">Other  </label> <br><br>
+                                <label><input type="radio" name="gender">Male </label>
+                                <label><input type="radio" name="gender">Female </label>
+                                <label><input type="radio" name="gender">Other </label> <br><br>
 
-                                <label> Email: <input type="email" name="email" placeholder="Your email address" /> </label>
-                                <label>Phone: <input type="number" name="phone" placeholder="Your phone number"></label> <br><br>
+                                <label> Email: <input type="email" required name="email" placeholder="Your email address" /> </label> &nbsp;
+                                <label>Phone: <input type="number" required name="phone" placeholder="Your phone number"></label>
+                                <br><br>
 
-                                <label>Country: <select name="country" id="">
-                                    <option value="" selected>---select country---</option>
-                                    <option value="">Bangladesh</option>
-                                    <option value="">India</option>
-                                    <option value="">Pakistan</option>
-                                    <option value="">China</option>
+                                <label>Country: <select name="country" id="country">
+                                        <option disabled selected>---select country---</option>
+                                        <option value="bangladesh">Bangladesh</option>
+                                        <option value="india">India</option>
+                                        <option value="pakistan">Pakistan</option>
+                                        <option value="china">China</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="usa">USA</option>
+                                        <option value="saudiArabia">Saudi Arabia</option>
                                     </select>
-                                </label>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td height="40" colspan="2" align="center" background="img/bg1.1.jpg">
-                    <p> Copyright &COPY; Developed by Humayra Jahan.</p>
-                </td>
-            </tr>
-        </table>
-    </body>
+                                </label> <br><br>
+
+                                <p>If country is Bangladesh please select Division and District </p>
+                                <label>Division:
+                                    <select name="division" id="division">
+                                        <option disabled selected>--- select division ---</option>
+                                        <option value="barisal">Barisal</option>
+                                        <option value="chattogram">Chattogram</option>
+                                        <option value="dhaka">Dhaka</option>
+                                        <option value="khulna">Khulna</option>
+                                        <option value="mymensingh">Mymensingh</option>
+                                        <option value="rajshahi">Rajshahi</option>
+                                        <option value="rangpur">Rangpur</option>
+                                        <option value="sylhet">Sylhet</option>
+                                    </select>
+                                </label> &nbsp;
+
+                                <label>District:
+                                    <select name="district" id="district">
+                                        <option disabled selected>--- select district ---</option>
+                                        <optgroup label="BARISAL">
+                                            <option value="Barguna">Barguna</option>
+                                            <option value="Barishal">Barishal</option>
+                                            <option value="Bhola">Bhola</option>
+                                            <option value="Jhalokati">Jhalokati</option>
+                                            <option value="Patuakhali">Patuakhali</option>
+                                            <option value="Pirojpur">Pirojpur</option>
+                                        </optgroup>
+                                        <optgroup label="CHATTOGRAM">
+                                            <option value="Bandarban">Bandarban</option>
+                                            <option value="Brahmanbaria">Brahmanbaria</option>
+                                            <option value="Chandpur">Chandpur</option>
+                                            <option value="Chattogram">Chattogram</option>
+                                            <option value="Cumilla">Cumilla</option>
+                                            <option value="Cox's Bazar">Cox's Bazar</option>
+                                            <option value="Feni">Feni</option>
+                                            <option value="Khagrachhari">Khagrachhari</option>
+                                            <option value="Lakshmipur">Lakshmipur</option>
+                                            <option value="Noakhali">Noakhali</option>
+                                            <option value="Rangamati">Rangamati</option>
+                                        </optgroup>
+                                        <optgroup label="DHAKA">
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Faridpur">Faridpur</option>
+                                            <option value="Gazipur">Gazipur</option>
+                                            <option value="Gopalganj">Gopalganj</option>
+                                            <option value="Kishoreganj">Kishoreganj</option>
+                                            <option value="Madaripur">Madaripur</option>
+                                            <option value="Manikganj">Manikganj</option>
+                                            <option value="Munshiganj">Munshiganj</option>
+                                            <option value="Narayanganj">Narayanganj</option>
+                                            <option value="Narsingdi">Narsingdi</option>
+                                            <option value="Rajbari">Rajbari</option>
+                                            <option value="Shariatpur">Shariatpur</option>
+                                            <option value="Tangail">Tangail</option>
+                                        </optgroup>
+                                        <optgroup label="KHULNA">
+                                            <option value="Bagerhat">Bagerhat</option>
+                                            <option value="Chuadanga">Chuadanga</option>
+                                            <option value="Jessore">Jessore</option>
+                                            <option value="Jhenaidah">Jhenaidah</option>
+                                            <option value="Khulna">Khulna</option>
+                                            <option value="Kushtia">Kushtia</option>
+                                            <option value="Magura">Magura</option>
+                                            <option value="Meherpur">Meherpur</option>
+                                            <option value="Narail">Narail</option>
+                                            <option value="Satkhira">Satkhira</option>
+                                        </optgroup>
+                                        <optgroup label="MYMENSINGH">
+                                            <option value="Jamalpur">Jamalpur</option>
+                                            <option value="Mymensingh">Mymensingh</option>
+                                            <option value="Netrokona">Netrokona</option>
+                                            <option value="Sherpur">Sherpur</option>
+                                        </optgroup>
+                                        <optgroup label="RAJSHAHI">
+                                            <option value="Bogra">Bogra</option>
+                                            <option value="Joypurhat">Joypurhat</option>
+                                            <option value="Naogaon">Naogaon</option>
+                                            <option value="Natore">Natore</option>
+                                            <option value="Chapainawabganj">Chapainawabganj</option>
+                                            <option value="Pabna">Pabna</option>
+                                            <option value="Rajshahi">Rajshahi</option>
+                                            <option value="Sirajganj">Sirajganj</option>
+                                        </optgroup>
+                                        <optgroup label="RANGPUR">
+                                            <option value="Dinajpur">Dinajpur</option>
+                                            <option value="Gaibandha">Gaibandha</option>
+                                            <option value="Kurigram">Kurigram</option>
+                                            <option value="Lalmonirhat">Lalmonirhat</option>
+                                            <option value="Nilphamari">Nilphamari</option>
+                                            <option value="Panchagarh">Panchagarh</option>
+                                            <option value="Rangpur">Rangpur</option>
+                                            <option value="Thakurgaon">Thakurgaon</option>
+                                        </optgroup>
+                                        <optgroup label="SYLHET">
+                                            <option value="Habiganj">Habiganj</option>
+                                            <option value="Moulvibazar">Moulvibazar</option>
+                                            <option value="Sunamganj">Sunamganj</option>
+                                            <option value="Sylhet">Sylhet</option>
+                                        </optgroup>
+                                    </select>
+                                </label> <br><br>
+
+                                <label>Address: <textarea name="address" required id="" cols="30" rows="2"></textarea></label>
+                                <br/> <br/>
+
+                                <label>Upload profile picture(optional): </label> <input type="file" id="img" name="img" accept="image/*"> <br><br>
+
+                                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy <br><br>
+
+                                <input type="submit" value="SUBMIT">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td height="40" colspan="2" align="center" background="img/bg1.1.jpg">
+                <p> Copyright &COPY; Developed by Humayra Jahan.</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
 </html>
